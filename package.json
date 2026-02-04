@@ -1,0 +1,19 @@
+{
+  "name": "pz-gof",
+  "version": "1.0.0",
+  "description": "GOF patterns examples (TypeScript)",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node examples/run-all.ts",
+    "build": "tsc",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
