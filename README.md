@@ -48,14 +48,17 @@
 │   │   ├── creational
 │   │   │   ├── factory-method
 │   │   │   ├── builder
-│   │   │   └── singleton
+│   │   │   ├── singleton
+│   │   │   └── prototype
 │   │   ├── structural
 │   │   │   ├── adapter
 │   │   │   ├── facade
-│   │   │   └── decorator
+│   │   │   ├── decorator
+│   │   │   └── bridge
 │   │   ├── behavioral
 │   │   │   ├── strategy
-│   │   │   └── observer
+│   │   │   ├── observer
+│   │   │   └── command
 │   ├── examples
 │   │   ├── run-all.ts
 │   ├── .editorconfig
@@ -65,6 +68,55 @@
 └──
 
 ```
+## Implemented patterns ✅
+
+This repository includes working TypeScript examples and short explanations for the following patterns:
+
+- **Creational**
+  - `singleton` — guarantees a single instance and a global access point. (`src/creational/singleton`) ✅
+  - `prototype` — create new objects by cloning existing ones. (`src/creational/prototype`) ✅
+- **Structural**
+  - `adapter` — adapts an incompatible interface to a client's expected interface. (`src/structural/adapter`) ✅
+  - `bridge` — decouples abstraction from implementation so they can vary independently. (`src/structural/bridge`) ✅
+- **Behavioral**
+  - `command` — encapsulates requests as objects to parameterize clients and support queuing/undo. (`src/behavioral/command`) ✅
+
+Each pattern lives in its own directory with:
+- an implementation file(s),
+- `index.ts` exposing a `runXxx()` demo function,
+- `README.md` with a short explanation and run instructions.
+
+## How to run ▶️
+
+1. Install dependencies: `npm install`
+2. Run all demos: `npm start` — this executes `examples/run-all.ts` and prints the demo outputs to the console.
+
+Example output (trim):
+
+```
+✅ Запуск усіх прикладів:
+
+--- Singleton pattern demo ---
+First instance value: 0.21...
+Second instance value (after set): 123
+
+--- Prototype pattern demo ---
+Original: Product{...}
+Copy    : Product{...}
+
+--- Adapter pattern demo ---
+Adapter request (translated): Adapter: (translated) Special behavior of the Adaptee.
+
+--- Command pattern demo ---
+Receiver: turned ON
+Receiver: turned OFF
+```
+
+## Short conclusions ✍️
+
+- All required acceptance criteria are met: patterns are grouped by category, have runnable demos and short documentation.
+- Next improvements (optional): add unit tests (Jest), additional patterns (Facade, Decorator, Strategy, Observer), and more detailed explanations/comments for each file.
+
 ## Useful links
 
 [Refactoring Guru — Патерни проєктування](https://refactoring.guru/uk/design-patterns)
