@@ -7,7 +7,8 @@
     "start": "ts-node examples/run-all.ts",
     "build": "tsc",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "strategy": "ts-node src/behavioral/strategy/index.ts"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
